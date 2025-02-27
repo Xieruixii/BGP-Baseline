@@ -2,7 +2,7 @@
 
 ## System Overview
 
-<img src="doc/detection-prototype.png">
+
 
 The system consists of three main modules:
 
