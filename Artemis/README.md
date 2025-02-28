@@ -1,6 +1,6 @@
 ## Installation Steps (Linux)
 
-We deployed successfully artemis on a microk8s instance in Ubuntu 18 LTS. To install it yourself you can follow this steps:
+First should deploy artemis on a microk8s instance in Ubuntu 18 LTS. To install it yourself you can follow this steps:
 
 ### 1. Download and install microk8s (includes helm3 addon)
 
