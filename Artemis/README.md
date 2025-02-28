@@ -173,19 +173,6 @@ microk8s.helm3 install -f values.yaml -f example-values.yaml artemis artemis/art
 
 - http instead of https redirection: please check [this issue](https://github.com/FORTH-ICS-INSPIRE/artemis/issues/200)
 
-
-## How to Install and Setup
-
-To download and install the required software packages, please follow steps 1 through 6 described
-in [this docs section](https://bgpartemis.readthedocs.io/en/latest/installsetup/#install-packages).
-
-To setup the tool (as well as https access to it via the web application),
-please follow steps 1 through 5 described
-in [this docs section](https://bgpartemis.readthedocs.io/en/latest/installsetup/#setup-tool).
-
-*Note that specifically for testing purposes, we now support `vagrant` and `VirtualBox` VM automation;
-please check out [this docs page](https://bgpartemis.readthedocs.io/en/latest/vagrant/) for simple instructions on how to spin up a fully functioning ARTEMIS VM, running all needed microservices, within a minute.*
-
 ## How to Run and Configure
 
 1. Start ARTEMIS:
@@ -214,51 +201,6 @@ please check out [this docs page](https://bgpartemis.readthedocs.io/en/latest/va
    docker-compose stop
    ```
 
-**Note: We highly recommend going through the detailed docs instructions before using ARTEMIS for the first time.** You can further use several other microservices orthogonal to ARTEMIS (like `grafana` and `routinator`) by using the main ARTEMIS `docker-compose` yaml plus the additional yamls:
-```
-docker-compose -f docker-compose.yaml -f docker-compose.<other_service>.yaml -... <up>/<down>/...
-```## How to Install and Setup
+**Note: We highly recommend going through the detailed docs instructions before using ARTEMIS for the first time.**
 
-To download and install the required software packages, please follow steps 1 through 6 described
-in [this docs section](https://bgpartemis.readthedocs.io/en/latest/installsetup/#install-packages).
-
-To setup the tool (as well as https access to it via the web application),
-please follow steps 1 through 5 described
-in [this docs section](https://bgpartemis.readthedocs.io/en/latest/installsetup/#setup-tool).
-
-*Note that specifically for testing purposes, we now support `vagrant` and `VirtualBox` VM automation;
-please check out [this docs page](https://bgpartemis.readthedocs.io/en/latest/vagrant/) for simple instructions on how to spin up a fully functioning ARTEMIS VM, running all needed microservices, within a minute.*
-
-## How to Run and Configure
-
-1. Start ARTEMIS:
-
-   ```
-   docker-compose up -d
-   ```
-   *Please consult [this docs section](https://bgpartemis.readthedocs.io/en/latest/running/) if you need to activate additional services.*
-
-5. Visit web UI and configure ARTEMIS:
-
-   ```
-   https://<ARTEMIS_HOST>
-   ```
-   By visiting the system page:
-   ```
-   https://<ARTEMIS_HOST>/admin/system
-   ```
-   you can:
-   1. edit the basic configuration file of ARTEMIS that serves as the ground truth for detecting BGP hijacks (consult [this docs section](https://bgpartemis.readthedocs.io/en/latest/basicconf/) first)
-   2. control the monitoring, detection and mitigation modules.
-
-6. Stop ARTEMIS (optional)
-
-   ```
-   docker-compose stop
-   ```
-
-**Note: We highly recommend going through the detailed docs instructions before using ARTEMIS for the first time.** You can further use several other microservices orthogonal to ARTEMIS (like `grafana` and `routinator`) by using the main ARTEMIS `docker-compose` yaml plus the additional yamls:
-```
-docker-compose -f docker-compose.yaml -f docker-compose.<other_service>.yaml -... <up>/<down>/...
-```
 **Note:The source github code address is in [this docs section](https://github.com/FORTH-ICS-INSPIRE/artemis).Please see the source code URL for details.
